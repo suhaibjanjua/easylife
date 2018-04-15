@@ -1,0 +1,34 @@
+page-searchads {
+     ::-webkit-scrollbar {
+        display: none;
+    }
+    .toolbar-background {
+        background: #03A678;
+    }
+    .toolbar-title {
+        color: #fff;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .bar-buttons {
+        color: #fff;
+    }
+    .bar-buttons:hover {
+        color: #fff;
+    }
+    .item-md ion-thumbnail ion-img,
+    .item-md ion-thumbnail img {
+        width: 50px;
+        height: 50px;
+        top: -8px;
+        position: relative;
+    }
+    .item-md ion-thumbnail {
+        min-width: 30px;
+        min-height: 30px;
+        float: left;
+    }
+    .back-button.show-back-button {
+        color: #fff;
+    }
+}

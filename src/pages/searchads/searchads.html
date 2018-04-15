@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{searchText}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let r of res">
+            <span (click)="details(r)">
+              <ion-thumbnail item-start>
+                <img src="{{r.DisplayImage}}">
+              </ion-thumbnail>
+              <h2 style="font-size: 15px;">{{r.Name}}</h2>
+              <p style="font-size: 12px;">{{r.AdditionalInformation}}</p>
+              </span>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

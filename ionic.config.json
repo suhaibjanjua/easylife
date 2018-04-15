@@ -1,0 +1,8 @@
+{
+  "name": "easylife",
+  "app_id": "d6bc39e8",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

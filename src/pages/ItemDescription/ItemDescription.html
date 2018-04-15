@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-navbar class="easy-header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="currentitemDetails" text-uppercase> {{currentitemDetails.Name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<!--Product page code start-->
+
+<ion-grid *ngIf="currentitemDetails">
+  
+  <ion-row>
+    <ion-col col-12>
+      <ion-slides pager="true">
+                  <ion-slide *ngFor="let itemList of currentitemDetails.ImageFolderNameList">
+                     <img src="{{itemList}}">
+                  </ion-slide>
+               </ion-slides>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col col-12>
+        <h3 class="nam">{{currentitemDetails.Name}}</h3>
+    </ion-col>
+  </ion-row> -->
+
+  <!--  <ion-row>
+    <ion-col col-8>
+        <p class="posted"><strong>Posted By:</strong> {{currentitemDetails.Email}}</p>
+    </ion-col>
+    <ion-col col-4>
+        <p class="phone"><strong>Phone#:</strong> {{currentitemDetails.Phone}}</p>
+    </ion-col>
+  </ion-row> -->
+
+  <ion-row>
+    <ion-col col-4>
+        <div class="panel">
+                      <div class="panel-heading">
+                        <div class="panel-title" >Brand</div>
+                      </div>
+                      <div class="panel-body">{{currentitemDetails.BrandName}}</div>
+                    </div>
+    </ion-col>
+    <ion-col col-4>
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <div class="panel-title" >Sub Category</div>
+                      </div>
+                      <div class="panel-body">{{currentitemDetails.SubCatLevel1Name}}</div>
+                    </div>
+                </ion-col>
+
+                <ion-col col-4>
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <div class="panel-title" >Price</div>
+                      </div>
+                      <div class="panel-body">{{currentitemDetails.Price}}</div>
+                    </div>
+                </ion-col>
+
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col col-6>
+        <h4 class="priceName">Price</h4>
+    </ion-col>
+    <ion-col col-6>
+        <h4 class="price">{{currentitemDetails.Price}}</h4>
+    </ion-col>
+  </ion-row> -->
+    
+  
+    <div padding>
+  <ion-segment [(ngModel)]="info">
+    <ion-segment-button value="Description">
+      Description
+    </ion-segment-button>
+    <ion-segment-button value="additional">
+      Additional Info
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="info">
+  <ion-list *ngSwitchCase="'Description'">
+    <ion-item>
+       <p class="description" >{{currentitemDetails.Description}} </p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'additional'">
+    <ion-item>
+      <p class="description">{{currentitemDetails.AdditionalInformation}}</p>
+    </ion-item>
+  </ion-list>
+</div>
+
+
+ <ion-row>
+    <ion-col col-6>
+        <div class="panel">
+                      <div class="panel-heading">
+                        <div class="panel-title">Email</div>
+                      </div>
+                      <div class="panel-body">{{currentitemDetails.Email}}</div>
+                    </div>
+    </ion-col>
+    <ion-col col-6>
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <div class="panel-title" >Phone</div>
+                      </div>
+                      <div class="panel-body">{{currentitemDetails.Phone}}</div>
+                    </div>
+                </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+ 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Add Desire Item</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid *ngIf="userid">
+
+        <ion-row>
+
+            <ion-col>
+
+                <ion-item>
+                    <ion-label>Main Category</ion-label>
+                    <ion-select (ionChange)="getBrand($event)">
+                        <ion-option *ngFor="let mainCat of mainCats" [value]="mainCat.Id">{{mainCat.Name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Sub Category</ion-label>
+                    <ion-select (ionChange)="getBranditems($event)">
+                        <ion-option *ngFor="let brand of brands" [value]="brand.Id">{{brand.Name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Title</ion-label>
+                    <ion-input type="text" [(ngModel)]="title"></ion-input>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label floating>Description</ion-label>
+                    <ion-textarea [(ngModel)]="description"></ion-textarea>
+                </ion-item>
+
+                <br>
+
+
+                <h5 style="text-align: center;">Upload Image!</h5>
+                <input type="file" (change)="displayFile($event)" class="custom-file-input" name="brandImage" id="brandImage" />
+
+                <br>
+                <button ion-button full (click)="addDesireItem()">Submit</button>
+
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="!userid">
+        <button ion-button full (click)="login()">Login</button>
+        <p style="text-align:center;">Please Login to Add Brand</p>
+    </ion-grid>
+
+</ion-content>

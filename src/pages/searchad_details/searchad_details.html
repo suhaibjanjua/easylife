@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{items.Name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-slides>
+            <ion-slide *ngFor="let itemList of items.ImageFolderNameList">
+                <img src="{{itemList}}">
+            </ion-slide>
+        </ion-slides>
+        <ion-card-content>
+            <ion-card-title>
+                {{items.Name}}
+            </ion-card-title>
+            <p>
+                {{items.Description}}
+            </p>
+            <hr>
+            <p><strong>Brand Name:</strong> {{items.BrandName}} <br> <strong>Price:</strong> {{items.Price}} <br>
+                <strong>Sub Category:</strong> {{items.SubCatLevel1Name}} <br>
+            </p>
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>

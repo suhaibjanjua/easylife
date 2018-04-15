@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="row">
+        <div class="col easy-center">
+            <img src="assets/logo.png" alt="logo" width="70%">
+        </div>
+    </div>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label floating>Email</ion-label>
+                        <ion-input type="email" [(ngModel)]="Email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label floating>Password</ion-label>
+                        <ion-input type="password" [(ngModel)]="Password"></ion-input>
+                    </ion-item>
+
+
+                </ion-list>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button block style="font-weight: 100;" (click)="Login()">Login</button>
+                <p style="font-size: 16px; text-align: center; "><strong>OR</strong></p>
+                <button ion-button icon-only full style="font-weight: 100;" (click)="loginWithFB()">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    Login with Facebook</button>
+                <button ion-button icon-only full style="font-weight: 100; background: #DB4437;" (click)="loginWithGmail()">
+                        <ion-icon name="mail"></ion-icon>
+                    Login with Gmail</button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <p style="text-align: center">
+                    <a style="text-decoration: none; font-size: 12px;" (click)="GoToForgotpassword()">FORGOT PASSWORD</a></p>
+                <hr>
+                <p style="text-align: center; font-size: 12px;">NEW HERE?
+                    <a style="text-decoration: none; font-size: 12px;" (click)="GoToSignup()">CREATE AN ACCOUNT</a> </p>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+    <p style="font-size: 13px; text-align: center; ">Copyright &#169; 2017 Easy life Global Version 1.0 </p>
+</ion-footer>

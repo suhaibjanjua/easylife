@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Search Ad</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-item>
+        <ion-label floating>Search Text</ion-label>
+        <ion-input type="text" value="{{searchText}}" readonly></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-item>
+        <ion-label>Main Category</ion-label>
+        <ion-select (ionChange)="getBrand($event)">
+            <ion-option [value]="all">All</ion-option>
+            <ion-option *ngFor="let mainCat of mainCats" multiple="false" [value]="mainCat.Id">{{mainCat.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label>Brand</ion-label>
+        <ion-select (ionChange)="getBranditems($event)">
+            <ion-option [value]="all">All Brand</ion-option>
+            <ion-option *ngFor="let brand of brands" multiple="false" [value]="brand.Id">{{brand.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label>Sub Category Items</ion-label>
+        <ion-select (ionChange)="getitems($event)">
+            <ion-option [value]="all">All Sub Category</ion-option>
+            <ion-option *ngFor="let brandsItem of brandsItems" multiple="false" [value]="brandsItem.Id">{{brandsItem.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <br>
+    <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-select (ionChange)="CountryCode($event)">
+            <ion-option [value]="all">All Over the World</ion-option>
+            <ion-option *ngFor="let country of countries" multiple="false" [value]="country.Id">{{country.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <br>
+    <ion-item>
+        <ion-label>City</ion-label>
+        <ion-select (ionChange)="CityCode($event)">
+            <ion-option [value]="all">All Cities</ion-option>
+            <ion-option *ngFor="let city of cities" multiple="false" [value]="city.Id">{{city.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Min Price</ion-label>
+        <ion-input type="text" [(ngModel)]="Price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Max Price</ion-label>
+        <ion-input type="text" [(ngModel)]="PriceTwo"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <button ion-button full (click)="search_ad()">Search</button>
+
+
+
+
+
+</ion-content>

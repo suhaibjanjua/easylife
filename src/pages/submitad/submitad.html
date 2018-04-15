@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Submit Ad</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid>
+
+        <ion-row>
+
+            <ion-col>
+
+                <ion-item>
+                    <ion-label>Main Category</ion-label>
+                    <ion-select (ionChange)="getBrand($event)">
+                        <ion-option *ngFor="let mainCat of mainCats" [value]="mainCat.Id">{{mainCat.Name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Brand</ion-label>
+                    <ion-select (ionChange)="getBranditems($event)">
+                        <ion-option *ngFor="let brand of brands" [value]="brand.Id">{{brand.Name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Sub Category Items</ion-label>
+                    <ion-select (ionChange)="getitems($event)">
+                        <ion-option *ngFor="let brandsItem of brandsItems" [value]="brandsItem.Id">{{brandsItem.Name}}</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Price</ion-label>
+                    <ion-input type="number" [(ngModel)]="price"></ion-input>
+                </ion-item>
+
+                <ion-item>
+
+                    <ion-label floating>Aditional Information</ion-label>
+                    <ion-textarea [(ngModel)]="additionalinfo"></ion-textarea>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label floating>Title</ion-label>
+                    <ion-input type="text" [(ngModel)]="title"></ion-input>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label floating>Description</ion-label>
+                    <ion-textarea [(ngModel)]="description"></ion-textarea>
+                </ion-item>
+
+                <br>
+
+
+                <h5 style="text-align: center;">Upload Display Image!</h5>
+                <input type="file" (change)="displayFile($event)" class="custom-file-input" name="displayImage" id="displayImage" />
+
+
+                <br>
+
+                <h5 style="text-align: center;">Upload Other Image!</h5>
+                <input type="file" (change)="otherFile($event)" class="custom-file-input" name="otherimage[]" id="otherImage" multiple />
+
+                <br>
+
+
+
+                <button ion-button full (click)="adSubmit()">Submit</button>
+
+
+            </ion-col>
+
+        </ion-row>
+
+
+    </ion-grid>
+
+
+
+</ion-content>

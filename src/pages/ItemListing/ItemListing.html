@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Item List</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- <ion-list>
+        <ion-item *ngFor="let item of items">
+            <span (click)="details(item.Id,item.MainCatID,item.SubCatID,item.BrandID)">
+    <ion-thumbnail item-start>
+      <img src="{{item.DisplayImage}}">
+    </ion-thumbnail>
+    <h2 style="font-size: 15px;">{{item.Name}}</h2>
+    <p style="font-size: 12px;">{{item.Price}}</p>
+    </span>
+        </ion-item>
+    </ion-list> -->
+
+
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="details(item.Id,item.MainCatID,item.SubCatID,item.BrandID)">
+            <ion-thumbnail item-start>
+                <img src="{{item.DisplayImage}}">
+            </ion-thumbnail>
+            <h2>{{item.Name}}</h2>
+            <p>{{item.Price}}</p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

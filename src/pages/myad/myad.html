@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar class="easy-header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Ads</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+ <ion-list>
+  <ion-item *ngFor="let item of items">
+   <span (click)="details(item.Id,item.AdditionalInformation,item.BrandName,item.Description,item.DisplayImage,item.ImageFolderNameList,item.Price,item.SubCatLevel1Name,item.PostedDatetIme,item.MainCategoryName,item.Name )">
+    <ion-thumbnail item-start>
+      <img src="{{item.DisplayImage}}">
+    </ion-thumbnail>
+    <h2 style="font-size: 15px;">{{item.Name}}</h2>
+    <p style="font-size: 12px;">{{item.AdditionalInformation}}</p>
+    </span> 
+  </ion-item>
+</ion-list>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

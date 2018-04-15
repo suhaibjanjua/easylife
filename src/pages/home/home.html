@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar class="easy-header">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-searchbar animated="true" (change)="searchad()" [(ngModel)]="searchText"> </ion-searchbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+        <ion-col>
+            <button ion-button block style=" background: #03A678;" (click)="submitadpage()">Submit a Free Ad</button>
+        </ion-col>
+    </ion-row>
+
+
+    <!--  <ion-row>
+        <ion-col>
+            <h4 style=" text-align: center;">Browse By Category</h4>
+        </ion-col>
+    </ion-row> -->
+
+    <ion-grid class="bigCard">
+        <ion-row>
+
+            <ion-col col-4 *ngFor="let item of items">
+                <ion-card>
+                    <a (click)="GetSubCategory(item.Id,item.Name)" style="text-decoration: none;">
+                        <img class="logoImage" src="{{item.Logo}}" />
+                        <ion-card-content>
+                            <ion-card-title>
+                                <p style="text-align: center;">{{item.Name}}</p>
+                            </ion-card-title>
+                        </ion-card-content>
+                    </a>
+                </ion-card>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

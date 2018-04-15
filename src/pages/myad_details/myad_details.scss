@@ -1,0 +1,57 @@
+page-myad_details{
+
+::-webkit-scrollbar{
+display:none;
+}
+
+.toolbar-background{
+	background:#03A678;
+	}
+
+.toolbar-title{
+		color: #fff;
+		text-transform: uppercase;
+        text-align: left;
+	}
+
+.bar-buttons{
+	color: #fff;
+}
+
+.bar-buttons:hover{
+	color: #fff;
+}
+
+.item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
+    width: 30px;
+    height: 30px;
+    top: -8px;
+    position: relative;
+}
+
+.item-md ion-thumbnail {
+    min-width: 30px;
+    min-height: 30px;
+    float:left;
+    }
+
+
+.swiper-container {
+    background-color: #eee;  
+}
+
+.card-title-md {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.button-full-md{
+    float:right;
+}
+
+.back-button.show-back-button{
+    color:#fff;
+}
+
+
+}

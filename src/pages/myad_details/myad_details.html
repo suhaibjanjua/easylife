@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar class="easy-header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >My Ads</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+  <ion-slides  pager="true">
+        <ion-slide *ngFor="let itemList of currentitemDetails.ImageFolderNameList">
+           <img src="{{itemList}}">
+        </ion-slide>
+      </ion-slides>
+  <ion-card-content>
+    <ion-card-title>
+      {{currentitemDetails.Name}}
+      </ion-card-title>
+    <p>
+      {{currentitemDetails.Description}}
+    </p>
+    <hr>
+    <p><strong>Brand Name:</strong> {{currentitemDetails.BrandName}} <br> <strong>Price:</strong> {{currentitemDetails.Price}} <br>
+      <strong>Sub Category:</strong> {{currentitemDetails.SubCatLevel1Name}} <br>
+      <button ion-button small color="danger" (click)=deleteAd(currentitemDetails.Id)>Delete this Ad</button>
+     </p>
+  </ion-card-content>
+
+</ion-card>
+
+    
+      
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{subCat}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- <ion-list>
+        <ion-item *ngFor="let item of items">
+            <span class="brand" (click)="get_ad_Details(item.MainCategoryId,item.SubCategoryId,item.Id)">
+        <ion-thumbnail item-start>
+          <img src="{{item.Logo}}">
+        </ion-thumbnail>
+
+        <h2 style="font-size: 15px;">{{item.Name}}</h2>
+        <p style="font-size: 12px;">{{item.Description}}</p>
+        
+    </span>
+        </ion-item>
+    </ion-list> -->
+
+
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="get_ad_Details(item.MainCategoryId,item.SubCategoryId,item.Id)">
+            <ion-thumbnail item-start>
+                <img src="{{item.Logo}}">
+            </ion-thumbnail>
+            <h2>{{item.Name}}</h2>
+            <p>{{item.Description}}</p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
