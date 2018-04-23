@@ -40,9 +40,9 @@ export class MyApp {
     this.user_email = localStorage.getItem('Email');
     this.pages = [
       { title: 'Home', component: TabsPage },
-      { title: 'Change Password', component: changepassword },
       { title: 'Add Desire Brand', component: AddDesireBrand },
-      { title: 'Add Desire Item', component: AddDesireItem }
+      { title: 'Add Desire Item', component: AddDesireItem },
+      { title: 'Change Password', component: changepassword }
     ];
   }
 
