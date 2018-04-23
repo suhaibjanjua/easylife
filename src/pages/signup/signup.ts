@@ -36,6 +36,7 @@ export class signup {
   Phone = "";
   ConfirmPassword = "";
   SocialMedia = "None";
+  TermsConditions = Boolean;
 
   ngOnInit() {
     let loadingPopup = this.loadingCtrl.create({
@@ -86,6 +87,16 @@ export class signup {
 
     }
     else if (this.Password === this.ConfirmPassword) {
+
+      if(!this.TermsConditions){
+        let alert = this.toastCtrl.create({
+          message: 'Please accept Terms & Condition to sign up.',
+          duration: 3000,
+          position: 'bottom',
+        });
+        alert.present();
+        return;
+      }
 
       let loadingPopup = this.loadingCtrl.create({
         content: 'Please Wait ...'
@@ -142,7 +153,7 @@ export class signup {
 
         }
       });
-    } else {
+    } else  {
      
 
       let alert = this.toastCtrl.create({
