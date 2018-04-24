@@ -5,6 +5,7 @@ import { SubCategory } from '../SubCategory/SubCategory';
 import { searchad } from '../searchad/searchad';
 import { submitad } from '../submitad/submitad';
 import { LoginPage } from '../login/login';
+import { TabsPage } from '../tabs/tabs';
 
 
 @Component({
@@ -21,16 +22,17 @@ export class HomePage {
      
    }
 
-   	 ngOnInit(){
-      let loadingPopup = this.loadingCtrl.create({
-        content: 'Please Wait ...'
-     });
-        this.DashboardServices.get_main_Catogries().subscribe(res =>{
-          this.items = res.Details;
-          
-          loadingPopup.dismiss();
+   	ngOnInit(){
+        
+        let loadingPopup = this.loadingCtrl.create({
+            content: 'Please Wait ...'
         });
-      }
+        
+        this.DashboardServices.get_main_Catogries().subscribe(res =>{
+            this.items = res.Details;
+            loadingPopup.dismiss();
+        });
+    }
        
        submitadpage(){
 
@@ -45,7 +47,7 @@ export class HomePage {
           loadingPopup.dismiss();
 
       }else{
-         this.navCtrl.push(submitad);
+         this.navCtrl.push(submitad); 
        }
     }
 

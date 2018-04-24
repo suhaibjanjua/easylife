@@ -9,7 +9,7 @@ import { dashboardservices } from './services/dashboard.services';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
 
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { changepassword } from '../pages/changepassword/changepassword';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -25,7 +25,7 @@ import { AddDesireBrand } from '../pages/AddDesireBrand/AddDesireBrand';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = TabsPage;
   user_email:any;
   pages: Array<{title: string, component: any}>;
   

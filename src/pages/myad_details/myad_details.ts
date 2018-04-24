@@ -27,7 +27,8 @@ export class myad_details {
      for (let i = 0; i < this.items.length; ++i) {
      	
      	if (this.items[i].Id == this.itemId) {
-     		this.currentitemDetails = this.items[i];
+				 this.currentitemDetails = this.items[i];
+				 console.log(this.currentitemDetails);
      	}
      }     
   }
@@ -41,7 +42,7 @@ export class myad_details {
 
     let alert = this.alertCtrl.create({
 					    title: 'Your Ad',
-					    subTitle: 'Are You Sure? Delete this Ad',
+					    subTitle: 'Are you sure you want to delete this Ad?',
 					   buttons: [
 							        {
 							          text: 'Yes',

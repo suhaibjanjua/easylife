@@ -81,7 +81,7 @@ export class LoginPage {
 
                         let alert = this.toastCtrl.create({
                             message: 'Login Failed We didnt recognize you ! Please Signup if you dont have an account. Or You Dont have a valid account when login with Facebook',
-                            duration: 3000,
+                            duration: 5000,
                             position: 'bottom',
                           });
                           alert.present();
@@ -120,7 +120,7 @@ export class LoginPage {
 
                     let alert = this.toastCtrl.create({
                         message: 'Login Failed We didnt recognize you ! Please Signup if you dont have an account. Or You Dont have a valid email when login with Gmail',
-                        duration: 3000,
+                        duration: 5000,
                         position: 'bottom',
                       });
                       alert.present();

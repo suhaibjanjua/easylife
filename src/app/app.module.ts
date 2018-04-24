@@ -37,7 +37,7 @@ import { AddDesireBrand } from './../pages/AddDesireBrand/AddDesireBrand';
 
 @NgModule({
   declarations: [
-    MyApp, HomePage, ListPage, LoginPage, signup, forgotpassword, changepassword, TabsPage, SubCategory,
+    MyApp, TabsPage, HomePage, ListPage, LoginPage, signup, forgotpassword, changepassword, SubCategory,
     brand, submitad, myad, myad_details, searchad, AddDesireItem, searchads, searchad_details, signupFB,signupGM,
     ItemListing, ItemDescription, AddDesireBrand
   ],
@@ -50,7 +50,7 @@ import { AddDesireBrand } from './../pages/AddDesireBrand/AddDesireBrand';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp, HomePage, ListPage, LoginPage, signup, forgotpassword, changepassword, TabsPage, SubCategory,
+    MyApp, TabsPage, HomePage, ListPage, LoginPage, signup, forgotpassword, changepassword, SubCategory,
     brand, submitad, myad, myad_details, searchad, AddDesireItem, searchads, searchad_details, signupFB, signupGM,
     ItemListing, ItemDescription, AddDesireBrand
   ],
