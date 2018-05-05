@@ -5,7 +5,6 @@ import { SubCategory } from '../SubCategory/SubCategory';
 import { searchad } from '../searchad/searchad';
 import { submitad } from '../submitad/submitad';
 import { LoginPage } from '../login/login';
-import { TabsPage } from '../tabs/tabs';
 
 
 @Component({
