@@ -73,7 +73,7 @@ export class signupFB {
     loadingPopup.present();
 
     this.signupServices.signup(this.countryCode, this.cityCode, this.Email, this.Firstname, this.Lastname, this.Password, this.Phone, this.SocialMedia).subscribe(res => {
-      //console.log(res);
+      console.log(res);
       loadingPopup.dismiss();
 
       if (res.ResponseCode == '500') {

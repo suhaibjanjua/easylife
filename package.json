@@ -1,8 +1,8 @@
 {
   "name": "easylife",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://xfinitylinks.com//",
+  "author": "Suhaib Janjua",
+  "homepage": "http://suhaibjanjua.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
