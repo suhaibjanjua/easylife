@@ -142,28 +142,67 @@ export class submitad {
       console.log("Input file error.");
       return;
     }else {
-      this.displayfile = inputValue.files[0];
+        this.displayfile = inputValue.files[0];
         this.displayfileName = this.displayfile.name;
         this.EasyLifePostImage = 'EasyLifePostImage.'+this.displayfileName.split('.').pop();
         this.formData.append('EasyLifePostImage', this.displayfile, this.EasyLifePostImage);
     }
   }
 
-  otherFile($event){
+  // otherFile($event){
     
+  //   var inputValue = $event.target;
+  //   if( null == inputValue || null == inputValue.files[0]){
+  //     console.log("Input file error.");
+  //     return;
+  //   }else {
+      
+  //     for(let i=0; i<inputValue.files.length; i++){
+  //       this.formData.append('otherImage'+[i], inputValue.files[i]);
+  //     }
+
+  //   }
+  // }
+
+  ImageFile1($event){
     var inputValue = $event.target;
     if( null == inputValue || null == inputValue.files[0]){
-      console.log("Input file error.");
-      return;
+       console.log("Input file error.");
+       return;
     }else {
-      
-      for(let i=0; i<inputValue.files.length; i++){
-        this.formData.append('otherImage'+[i], inputValue.files[i]);
-      }
-
+        this.formData.append('otherImage'+[0], inputValue.files[0]);
     }
   }
-
+  
+  ImageFile2($event){
+    var inputValue = $event.target;
+    if( null == inputValue || null == inputValue.files[0]){
+       console.log("Input file error.");
+       return;
+    }else {
+        this.formData.append('otherImage'+[1], inputValue.files[0]);
+    }
+  }
+  
+  ImageFile3($event){
+    var inputValue = $event.target;
+    if( null == inputValue || null == inputValue.files[0]){
+       console.log("Input file error.");
+       return;
+    }else {
+        this.formData.append('otherImage'+[2], inputValue.files[0]);
+    }
+  }
+  
+  ImageFile4($event){
+    var inputValue = $event.target;
+    if( null == inputValue || null == inputValue.files[0]){
+       console.log("Input file error.");
+       return;
+    }else {
+        this.formData.append('otherImage'+[3], inputValue.files[0]);
+    }
+  }
   
 
   adSubmit(){
